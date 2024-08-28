@@ -13,6 +13,7 @@
 		module.exports = factory( require( "jquery" ) );
 	} else {
 		factory( jQuery );
+		factory( jQuery );
 	}
 }(function( $ ) {
 

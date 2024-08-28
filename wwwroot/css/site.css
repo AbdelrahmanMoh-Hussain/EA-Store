@@ -24,12 +24,109 @@ html {
 body {
   margin-bottom: 60px;
 }
+/*Custom Styling starts*/
+
+.navbar {
+    padding: 5px;
+}
+
 .navbar-brand img {
     width: 3rem;
     height: 3rem;
 }
+
+.nav-link {
+    font-size: 1.3rem;
+}
+
 .footer {
     position: absolute;
     bottom: 0;
-    width:100%;
+    width: 100%;
 }
+.cover-preview {
+    max-width:500px;
+    border-radius: 10px;
+    max-height: 700px;
+}
+.card-body{
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    box-sizing: border-box;
+}
+.card-footer {
+    padding: 0.8rem;
+}
+.card-footer i {
+    font-size: 1.1rem;
+}
+td img {
+    width: 90px;
+    height: auto;
+    
+}
+.card-img {
+    width: 100%;
+    height: 100%;
+}
+/*Custom Styling ends*/
+/* Start override select2 */
+.select2-container--default .select2-selection--single {
+    background-color: white;
+    border: none;
+    border-radius: 2px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 100%;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #fff;
+    line-height: 38px;
+}
+
+.select2-dropdown.select2-dropdown--below {
+    background-color: #9ca4d1;
+}
+
+.select2-container--default.select2-results__option--highlighted[aria-selected] {
+    background-color: white;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: white;
+}
+
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple {
+    background-color: transparent;
+    border: solid 1px #9ca4d1;
+    border-radius: 0.5rem;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #d23480;
+    border: 1px solid #250d49;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
+    color: transparent;
+}
+
+.select2 {
+    width: 100% !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #b3d4ec;
+}
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: #d23480;
+    /* border: solid 1px #9ca4d1; */
+}
+
+/* End override select2 */

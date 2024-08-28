@@ -1,8 +1,41 @@
-﻿@{
+﻿@model List<Game>
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+@if(Model.Count == 0)
+{
+    <div class="alert alert-warning mt-5">
+        <h4 class="alert-heading">NO GAMES!</h4>
+        <p class="mb-0">No Games have been added yet. <a asp-controller="Games" asp-action="Create" class="alert-link">Add a game</a>.</p>
+    </div>
+}
+else
+{
+    <div class="row mt-5">
+        @foreach (var game in Model)
+        {
+            <div class="col-lg-4 col-sm-6">
+                <a asp-controller="Games" asp-action="Details" asp-route-id="@game.Id" class="card border-secondary mb-3 text-decoration-none " style="max-width: 20rem;">
+                    <div class="card-body " style="background-image: url(@($"{FileSettings.ImagesPath}/{game.Cover}"))">
+                        <div class="d-flex align-items-end fs-3 h-100">
+                            <span class="badge bg-info">@game.Category.Name</span>
+                        </div>
+                    </div>
+                    <div class="card-footer  d-flex justify-content-between align-items-center">
+                        <h5>@game.Name</h5>
+                        <div class="text-muted ">
+                            @foreach(var gameDevice in game.Devices)
+                            {
+                                <i class="@gameDevice.Device.Icon me-1"></i>
+                            }
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+}
+
+
