@@ -93,5 +93,14 @@ namespace EA_Store.Controllers
 
             return game is null ? NotFound() : RedirectToAction(nameof(Index));
         }
+
+        [HttpDelete]
+        public IActionResult Delete(int id)
+        {
+
+            var isDeleted = _gamesService.Delete(id);
+
+            return isDeleted ? Ok() : BadRequest();
+        }
     }
 }

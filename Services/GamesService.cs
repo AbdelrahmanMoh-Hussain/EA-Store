@@ -108,5 +108,23 @@ namespace EA_Store.Services
 
             return coverName;
         }
+
+        public bool Delete(int id)
+        {
+            var game = _context.Game.Find(id);
+            if (game is null)
+                return false;
+
+            _context.Game.Remove(game);
+            var effectedRows = _context.SaveChanges();
+            if (effectedRows > 0)
+            {
+                var cover = Path.Combine(_imagesPath, game.Cover);
+                File.Delete(cover);
+                return true;
+            }
+
+            return false;
+        }
     }
 }

@@ -8,5 +8,7 @@ namespace EA_Store.Services
         Game? GetGameById(int id);
         Task Create(CreateGameFormViewModel model);
         Task<Game?> Update(EditGameFormViewModel model);
+
+        bool Delete(int id);
     }
 }
