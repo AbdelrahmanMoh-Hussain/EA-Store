@@ -8,7 +8,7 @@ EA-Store is an MVC (Model-View-Controller) web application built with ASP.NET Co
 
 - **Game Store Management:** Add, view, update, and delete products.
 - **Responsive UI:** A user-friendly and responsive interface built with Bootstrap.
-- **Search Functionality:** Easily search for products by name or category.
+
 
 ## Technologies Used
 
