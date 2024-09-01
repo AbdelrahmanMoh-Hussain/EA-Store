@@ -27,7 +27,7 @@ EA-Store is an MVC (Model-View-Controller) web application built with ASP.NET Co
 ![image](https://github.com/user-attachments/assets/a3ff25b8-7db8-4adc-8160-5a788e06531f)
 
 ### Games List
-![image](https://github.com/user-attachments/assets/8d390f81-1a4d-4954-bbaf-21d6f6d4d341)
+![image](https://github.com/user-attachments/assets/bac2b0fb-c74a-41cf-b64f-3a8cb025b340)
 
 ### Add Game
 ![image](https://github.com/user-attachments/assets/cd6505f5-2f94-4e48-afcb-33bb1702e195)
